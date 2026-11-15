@@ -1,0 +1,66 @@
+# 节点订阅 · 每 6 小时（sub6）
+#
+# 部署：
+#   1. sub6.py 放到仓库根目录
+#   2. 本文件内容放到 .github/workflows/sub6.yml
+#   3. Settings → Actions → General → Workflow permissions 选
+#      "Read and write permissions"（或用下面的 permissions 块，二选一）
+#
+# 跑完自动：采集 → TCP 存活筛 → out6/{sub.txt,links.txt,clash.yaml,stats.json,report.md}
+#          → 提交回仓库 → 刷新 jsDelivr 缓存
+#
+# 订阅链接（v2rayNG 里填这个）：
+#   https://cdn.jsdelivr.net/gh/你的用户名/你的仓库@main/out6/sub.txt
+#   分支名按实际改（main 或 master）。
+
+name: 节点订阅-6h
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"      # UTC 0/6/12/18 点 = 北京 8/14/20/2 点
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  TZ: Asia/Shanghai
+
+concurrency:
+  group: node-sub6
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 生成本期订阅
+        run: python3 sub6.py --out out6 --limit 600 --timeout 3 --concurrency 300
+
+      - name: 提交回仓库
+        run: |
+          git config user.name "sub6-bot"
+          git config user.email "sub6-bot@users.noreply.github.com"
+          git add -A out6/
+          if git diff --cached --quiet; then
+            echo "无变化，跳过提交"
+          else
+            KEPT=$(python3 -c "import json;print(json.load(open('out6/stats.json'))['kept'])")
+            git commit -m "sub6 $(date -u +%Y-%m-%dT%H:%MZ) kept=${KEPT}"
+            git push
+          fi
+
+      - name: 刷新 jsDelivr 缓存
+        run: |
+          for f in sub.txt links.txt clash.yaml stats.json report.md; do
+            curl -sS --max-time 30 \
+              "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@${GITHUB_REF_NAME}/out6/$f" \
+              || true
+          done
