@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-15 20:21:57",
-  "generated_at_utc": "2026-11-15T12:21:57Z",
+  "generated_at": "2026-11-16 06:20:45",
+  "generated_at_utc": "2026-11-15T22:20:45Z",
   "sources": [
     {
       "name": "anaer",
-      "count": 2120,
+      "count": 2157,
       "status": "ok"
     },
     {
@@ -19,7 +19,7 @@
     },
     {
       "name": "Eternity",
-      "count": 200,
+      "count": 199,
       "status": "ok"
     },
     {
@@ -28,44 +28,46 @@
       "status": "ok"
     }
   ],
-  "raw": 7169,
-  "valid": 7169,
-  "uniq": 5464,
+  "raw": 7205,
+  "valid": 7205,
+  "uniq": 5481,
   "screened": true,
-  "tcp_alive": 2201,
+  "tcp_alive": 2206,
   "kept": 600,
   "by_region": {
-    "US": 348,
-    "??": 133,
+    "??": 134,
+    "US": 343,
+    "NL": 8,
     "AU": 5,
-    "NL": 9,
+    "CA": 18,
     "IT": 11,
-    "HK": 2,
-    "CA": 17,
-    "GB": 11,
-    "BR": 20,
-    "FR": 11,
+    "HK": 4,
+    "GB": 13,
+    "BR": 22,
+    "DE": 2,
+    "FR": 10,
+    "CZ": 1,
     "ES": 3,
-    "NO": 1,
     "UA": 1,
     "CH": 5,
-    "SE": 1,
-    "RU": 2,
+    "NO": 1,
+    "SE": 2,
+    "AT": 1,
+    "RU": 1,
     "KR": 1,
-    "JP": 4,
-    "SG": 10,
+    "JP": 3,
     "ZA": 2,
-    "DE": 3
+    "SG": 9
   },
   "by_proto": {
-    "vmess": 359,
-    "vless": 29,
+    "vmess": 368,
+    "vless": 31,
     "hysteria2": 5,
-    "ss": 94,
-    "trojan": 113
+    "trojan": 103,
+    "ss": 93
   },
-  "tcp_ms_median": 8,
-  "elapsed_s": 30.0,
+  "tcp_ms_median": 9,
+  "elapsed_s": 29.3,
   "files": [
     "sub.txt",
     "links.txt",
