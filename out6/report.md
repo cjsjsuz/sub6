@@ -1,32 +1,32 @@
 # 本轮订阅生成报告
 
-生成时间：2026-11-16 22:23:43（北京时间）
+生成时间：2026-11-17 09:21:28（北京时间）
 
 ## 漏斗
 
 | 阶段 | 数量 |
 |---|---|
-| 原始解析 | 7270 |
-| 合法 | 7270 |
-| 去重 | 5523 |
-| TCP 存活 | 2230 |
+| 原始解析 | 7266 |
+| 合法 | 7266 |
+| 去重 | 5509 |
+| TCP 存活 | 2236 |
 | 最终保留 | 600 |
 
 ## 源状态
 
 - anaer: 2157 条（ok）
-- mahdibland: 4465 条（ok）
+- mahdibland: 4460 条（ok）
 - Peasoft: 437 条（ok）
 - Eternity: 200 条（ok）
-- Pawdroid: 11 条（ok）
+- Pawdroid: 12 条（ok）
 
 ## 地区分布
 
-US:348 ??:131 BR:22 CA:19 GB:13 IT:11 FR:11 SG:10 AU:6 JP:5 CH:5 NL:4 ES:3 KR:2 DE:2 ZA:2 NO:1 UA:1 AT:1 SE:1 HK:1 RU:1
+US:349 ??:137 BR:20 GB:13 IT:11 FR:11 CA:10 SG:10 JP:8 AU:6 CH:5 NL:4 ES:3 KR:2 DE:2 HK:2 ZA:2 NO:1 UA:1 AT:1 SE:1 RU:1
 
 ## 协议分布
 
-vmess:386 trojan:98 ss:89 vless:22 hysteria2:5
+vmess:392 trojan:110 ss:73 vless:20 hysteria2:5
 
 ## 说明
 
