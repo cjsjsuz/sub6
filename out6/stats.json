@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-24 00:57:28",
-  "generated_at_utc": "2026-11-23T16:57:28Z",
+  "generated_at": "2026-11-24 11:40:38",
+  "generated_at_utc": "2026-11-24T03:40:38Z",
   "sources": [
     {
       "name": "anaer",
@@ -14,7 +14,7 @@
     },
     {
       "name": "Peasoft",
-      "count": 300,
+      "count": 304,
       "status": "ok"
     },
     {
@@ -28,45 +28,46 @@
       "status": "ok"
     }
   ],
-  "raw": 7091,
-  "valid": 7091,
-  "uniq": 5374,
+  "raw": 7095,
+  "valid": 7095,
+  "uniq": 5390,
   "screened": true,
-  "tcp_alive": 2074,
+  "tcp_alive": 2087,
   "kept": 600,
   "by_region": {
     "??": 135,
-    "US": 351,
-    "GB": 16,
+    "US": 346,
     "AU": 5,
     "IT": 11,
-    "CA": 13,
-    "SG": 9,
-    "BR": 22,
-    "DE": 3,
+    "GB": 15,
+    "CA": 16,
+    "BR": 23,
     "FR": 9,
-    "NO": 1,
-    "JP": 6,
+    "DE": 3,
     "ES": 3,
-    "AT": 1,
+    "NO": 1,
     "CH": 4,
+    "AT": 1,
+    "NL": 5,
     "UA": 1,
     "SE": 1,
+    "JP": 3,
     "ZA": 2,
+    "SG": 9,
     "ID": 1,
+    "TW": 3,
     "HK": 2,
-    "TW": 1,
-    "NL": 3
+    "FI": 1
   },
   "by_proto": {
-    "vmess": 378,
+    "vmess": 386,
     "hysteria2": 10,
-    "vless": 13,
-    "ss": 96,
-    "trojan": 103
+    "ss": 93,
+    "vless": 20,
+    "trojan": 91
   },
-  "tcp_ms_median": 15,
-  "elapsed_s": 31.0,
+  "tcp_ms_median": 3,
+  "elapsed_s": 29.9,
   "files": [
     "sub.txt",
     "links.txt",
